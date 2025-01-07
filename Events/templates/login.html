@@ -1,0 +1,18 @@
+{% extends 'layouts/main.html' %}
+{% block content %}
+<div class="container mt-5" style="height: 100vh; align-content: center; max-width:400px;">
+    <h2 class="text-center mb-3">Login</h2>
+    <form method="POST" class="card p-3 ">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="username" class="form-label mt-2" style="font-size: 15px;">Username : </label>
+            <input type="text" class="form-control" id="username" name="username" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label" style="font-size: 15px;">Password :</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="font-size: 13px;">Login</button> <a href="{% url 'register' %}" class="text-center">or register</a>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,135 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+/* imp css variable decleration */
+:root{
+    --dark-blue:#333333;
+    --pure-white:#ffffff;
+    --sky-blue:#0D6EFD;
+    --grey:#686868;
+    --h1-font:7rem;
+    --h2-font:3.2rem;
+    --h3-font:2.8rem;
+    --h4-font:2.4rem;
+    --font-20px: 2rem;
+    --h5-font:1.8rem;
+    --p-font:1.6rem;
+    --font-segoe-UI:'segoe UI';
+    --font-pop:'poppins';
+
+}
+body{
+    font-family:var(--font-segoe-UI);
+}
+.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{
+    margin-bottom: 0;
+}
+.dark-black{
+    background-color: var(--dark-blue);
+}
+.dark-black-text{
+    color:var(--dark-blue);
+}
+.fw-600{
+    font-weight: 600;
+}
+.grey-clr{
+    color: var(--grey);
+}
+h1{
+    font-size: var(--h1-font);
+}
+h2{
+    font-size: var(--h2-font);
+}
+h3{
+    font-size:var(--h3-font);
+}
+h4{
+    font-size:var(--h4-font);
+}
+h5{
+    font-size:var(--h5-font);
+}
+p,.p-font-size{
+    font-size:var(--p-font);
+}
+.segoe-font{
+    font-family: var(--font-segoe-UI);
+}
+.mt-100{
+    margin-top: 10rem;
+}
+/* navbar session */
+.nav-link{
+    font-size: var(--p-font);
+    padding: 1rem 0.2rem;
+    position:relative;
+}
+.nav-link::before{
+    content:'';
+    position:absolute;
+    width:0;
+    height:0.15rem;
+    background-color: var(--pure-white);
+    bottom: 0.2rem;
+    left:0;
+    visibility: hidden;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+.nav-link:hover::before,.nav-link.active::before{
+ width: 100%;
+ visibility: visible;   
+}
+.navbar-toggler .fa-solid.fa-bars{
+    font-size: 2rem;    
+}
+/* landing page layout */
+.hero-session{
+    background-image: url(../static/images/landing3.jpg);
+    background-color: var(--dark-blue);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+.hero-session-overlay{
+    top:0;
+    bottom: 0;
+    right: 0;
+    left:0;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8));
+    z-index:-1;
+}
+.hero-session .container{
+    height: 86vh;
+}
+/* contact_page_style */
+.contact-card {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+.btn-darkblue {
+    background-color: #003366;
+    color: white;
+}
+.btn-darkblue:hover {
+    background-color: #002244;
+}
+.info-card {
+    margin-top: 20px;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.footercontent{
+    background-color:var(--dark-blue);
+}
